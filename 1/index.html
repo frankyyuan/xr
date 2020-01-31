@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>starter</title>
+    <meta name="description" content="starter">
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+
+    <!-- code for click to start -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+          const click = document.getElementById('click');
+          // Have to initialize via a user event
+          document.addEventListener('click', () => {
+              click.parentNode && click.parentNode.removeChild(click);
+          });
+      });
+  
+  </script>
+  <style>
+      #click {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: 10;
+          transform: translate(-50%, -50%);
+  
+          text-shadow: 0 1px 0 #FFF;
+          background: rgba(255, 255, 255, 0.75);
+          color: #000;
+          padding: 0.5em 1em;
+          border-radius: 3px;
+      }
+  </style>
+  </head>
+  <body>
+
+    <!-- code for click to start -->
+    <div id="click">Click to start experience</div>
+
+    <!-- start scene with a-scene -->
+    <a-scene>
+    
+    <!-- load assets in a-assets section -->
+      <a-assets>
+        <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg" crossorigin="anonymous">
+        <img id="skyTexture" src="img/sfai5.jpg" crossorigin="anonymous">
+
+        <a-asset-item id="franky" src="models/frankytest.glb"></a-asset-item>
+
+      </a-assets>
+
+      <!-- <a-torus-knot color="#B84A39" arc="180" p="2" q="7" radius="5" radius-tubular="0.1" material="color: #53f60f; side: double; blending: none; emissive: #08e1f8; emissiveIntensity: -0.78; height: 260.17; metalness: 0.43" geometry=""></a-torus-knot> -->
+      <a-sphere color="yellow" radius="1" material="color: #fc0295; opacity: 0.84; vertexColors: face; emissive: #f51129; metalness: 0.7; roughness: 0.49" animation="property: position; from:0 1 -14; to: 0 1 7; loop: true; dur: 3000; dir: alternate; easing: easeInSine"></a-sphere>
+
+
+      <!-- <a-gltf-model src="#franky"></a-gltf-model> -->
+      <a-gltf-model src="#franky" rotation="48.057 -112.33 88.333" position="1.632 3.853 0.277" scale="3.442 3.442 3.442"  gltf-model="models/frankytest.glb" ></a-gltf-model>
+
+      <a-sky height="2048" radius="30" src="#skyTexture" theta-length="90" width="2048" material="" geometry="radius: 45.99; thetaLength: 152.35"></a-sky>
+
+      
+      <!-- Ground. -->
+      <!-- <a-circle src="#groundTexture" rotation="-90 0 0" radius="32"></a-circle> -->
+
+      <!--Tracked controls. -->
+      <a-entity hand-controls="hand: left"></a-entity>
+      <a-entity hand-controls="hand: right"></a-entity>
+    </a-scene>
+  </body>
+</html>
