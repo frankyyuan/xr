@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Hello, WebVR! • A-Frame</title>
+  <meta name="description" content="Hello, WebVR! • A-Frame">
+  <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+  <!-- add aframe extras -->
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+
+</head>
+
+<body>
+  <a-scene>
+      <a-camera position="0 3 1"></a-camera>
+    <a-assets>
+      <a-asset-item id="room" src="models/moody_lighting_art_gallery_2019/scene.gltf" position="0 -1 0"></a-asset-item>
+      <a-asset-item id="baby" src="models/hulky_baby/scene.gltf"></a-asset-item>
+      <a-asset-item id="insect" src="models/praying_mantis/scene.gltf"></a-asset-item>
+      <a-asset-item id="gun" src="models/space_gun/scene.gltf"></a-asset-item>
+      <a-asset-item id="grass" src="models/chinese_fountain_grass/scene.gltf"></a-asset-item>
+      <a-asset-item id="helmet" src="models/froghelmet/scene.gltf"></a-asset-item>
+
+      <a-asset-item id="armysmile" src="models/house/armysmile.obj"></a-asset-item>
+      <a-asset-item id="as-mtl" src="models/house/armysmile.mtl"></a-asset-item>
+
+
+      <!-- <a-asset-item id="creature" src="assets/models/brain_boss_creature/scene.gltf" position="0 -1 0"> -->
+      </a-asset-item>
+    </a-assets>
+<a-entity id="myscene"> 
+
+
+    <a-obj-model src="#armysmile" mtl="#as-mtl" position="9.47832 2 13.42964" rotation="-180 3.452 -180" scale="1.98404 1.70568 1.50914" material="" obj-model="">
+    </a-obj-model>
+
+    <a-gltf-model src="#room" scale="0.1 0.1 0.1" position="-3.02544 -0.17931 47.39248"></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="0 2.38171 0" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf " animation="property: position; from:0 10 0; to: 0 2.38171 0; loop: true; dur: 1000; dir: alternate; easing: easeInSine"></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="3 2.38171 0" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf" ></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="6 2.38171 0" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf" animation="property: position; from:6 7.38171 0; to: 6 2.38171 0; loop: true; dur: 700; dir: alternate; easing: easeInSine"></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="-3 2.38171 0" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="-6 2.38171 0" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="0 2.38171 -3" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="3 2.38171 -3" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf" animation="property: rotation; from:180 -6 -180; to:-180 -6 -180; loop: true; dur: 700; dir: alternate; easing: easeInSine"></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="6 2.38171 -3" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="-3 2.38171 -3" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="-6 2.38171 -3" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="-6 2.38171 3" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="-3 2.38171 3" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="0 2.38171 3" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="3 2.38171 3" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="6 2.38171 3" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+
+    
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="-6 2.38171 6" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="-3 2.38171 6" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="0 2.38171 6" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="3 2.38171 6" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="6 2.38171 6" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="-6 2.38171 9" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="-3 2.38171 9" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="0 2.38171 9" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="3 2.38171 9" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.47859 0.47859 0.47859" position="6 2.38171 9" rotation="-180 -6 -180" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+  
+   <a-entity id="bigbrother">
+    <a-gltf-model src="#baby" scale="0.61125 0.61125 0.61125" position="1.99385 5 17.53719" rotation="0 1.9818610133575176 0" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.61125 0.61125 0.61125" position="1.99385 6 17.53719" rotation="0 1.9818610133575176 0" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+    <a-gltf-model src="#baby" scale="0.61125 0.61125 0.61125" position="1.99385 7 17.53719" rotation="0 1.9818610133575176 0" gltf-model="models/hulky_baby/scene.gltf"></a-gltf-model>
+    <a-gltf-model src="#helmet" scale="" position="1.90739 8.9564 16.10378" rotation="5.702648934937083 -175.75193886740436 2.473458801579764" gltf-model="models/froghelmet/scene.gltf"></a-gltf-model>
+  </a-entity>
+
+<a-entity id="armyleader">
+    <a-gltf-model src="#insect" scale="2.17549 2.17549 2.17549" position="-2.24563 0 -4.07499" gltf-model="models/praying_mantis/scene.gltf"></a-gltf-model>
+    <a-gltf-model src="#gun" scale="-0.0351 -0.0351 0.04035" position="4.16423 6.49494 -2.36741" gltf-model="models/space_gun/scene.gltf"></a-gltf-model>
+    <a-gltf-model src="#grass" scale="0.05623 0.05623 0.05623" position="0.81625 -0.52967 -14.45998" gltf-model="models/chinese_fountain_grass/scene.gltf"></a-gltf-model>
+</a-entity>
+        <a-entity light="type: directional; color: red; intensity: 1" position="-1 1 1"></a-entity>
+        <a-entity light="type: directional; color: green; intensity: 1" position="1 1 1"></a-entity>
+        <a-entity light="type: directional; color: white; intensity: 1" position="2 1 1"></a-entity>
+        <a-entity id="point" light="type: point; intensity: .7; distance: 35; decay: 2"
+          position="1.99385 7 17.53719"></a-entity>
+  </a-entity>
+
+
+
+
+
+    <!-- <a-gltf-model src="#creature" scale="0.025 0.025 0.025" position="1.64878 .5 -20" animation-mixer> -->
+
+
+  </a-scene>
+</body>
+
+</html>
